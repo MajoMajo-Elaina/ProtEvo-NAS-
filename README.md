@@ -2,15 +2,28 @@
 ## Dependency Install
 
 ```text
-pytorch>=1.12.0
-CUDA  11.6
+pytorch==1.12.0
+CUDA ==11.6
+dgl ==1.1.0+cu116
+ray==2.10.0
+networkx==3.1
 ```
 
 ## Usage
 
 ```python
 # Search process
+cd /search_algorithm/NAS
 python search_algorithm.py
+```
+Note: Running search_algorithm.py will automatically generate two directories required for the prediction step:
+
+results/: Stores the detailed prediction outputs.
+
+save_models/: Saves the identified architecture weights and pre-trained models.
+```
+#Test on DPFunc and Deepfri
+python pred.py
 ```
 ## Datasets
 
